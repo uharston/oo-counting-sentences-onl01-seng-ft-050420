@@ -16,7 +16,7 @@ class String
 
   def count_sentences
     #find how to split the sentences into seperate element in an array with three arguments ( . ? !)
-    self.split(/[\.?!]/).length
+    self.split(/[\.?!]/).delete_if { |e| e.length == 0}.length
   end
 end
 
